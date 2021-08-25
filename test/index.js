@@ -1,7 +1,7 @@
-const prettier = require('prettier');
+const prettier = require('prettier')
 
-const red = str => '\033[31m' + str + '\033[39m'
-const green = str => '\033[32m' + str + '\033[39m';
+const red = (str) => '\033[31m' + str + '\033[39m'
+const green = (str) => '\033[32m' + str + '\033[39m'
 
 const tests = {
   css: {
@@ -72,41 +72,42 @@ const tests = {
 }
 `,
   },
-  less:{
-    input:`.bg {
+  less: {
+    input: `.bg {
       overflow: hidden;
       height: 100vh;
       background: url("../assets/bg.jpg") no-repeat;
       background-size: cover;
     }
-`, expected: `
+`,
+    expected: `
 .bg {
   height: 100vh;
   overflow: hidden;
   background: url("../assets/bg.jpg") no-repeat;
   background-size: cover;
 }
-`
-  }
+`,
+  },
 }
 
-const color = passed => passed ? green : red;
+const color = (passed) => (passed ? green : red)
 
 async function testGroup(ext) {
-  const files = ['style', 'foo/bar/style', 'foo\\bar\\styles'];
+  const files = ['style', 'foo/bar/style', 'foo\\bar\\styles']
   console.group(ext)
   files
-    .map(n => `${n}.${ext}`)
-    .forEach(filepath => {
-      const { input, expected } = tests[ext];
+    .map((n) => `${n}.${ext}`)
+    .forEach((filepath) => {
+      const { input, expected } = tests[ext]
       const output = prettier.format(input, {
         filepath,
         plugins: ['.'],
       })
-      const passed = output.trim() === expected.trim();
-      console.log(color(passed)(`${passed ? '✔' : '✖'} ${filepath}`));
+      const passed = output.trim() === expected.trim()
+      console.log(color(passed)(`${passed ? '✔' : '✖'} ${filepath}`))
       if (!passed) {
-        console.log(output,'\n', expected);
+        console.log(output, '\n', expected)
         process.exitCode = 1
       }
     })
@@ -114,8 +115,8 @@ async function testGroup(ext) {
 }
 
 async function run() {
-  const exts = Object.keys(tests);
-  exts.forEach(ext => testGroup(ext));
+  const exts = Object.keys(tests)
+  exts.forEach((ext) => testGroup(ext))
 }
 
-run();
+run()

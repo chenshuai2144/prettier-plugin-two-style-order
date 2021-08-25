@@ -13,4 +13,4 @@ module.exports = [
   'animation-iteration-count',
   'animation-direction',
   'animation-fill-mode',
-];
+]

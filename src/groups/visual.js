@@ -1,4 +1,4 @@
-const borderProps = require('./border');
+const borderProps = require('./border')
 
 const a = [
   'list-style',
@@ -20,7 +20,7 @@ const a = [
   'background-origin',
   'background-attachment',
   'background-blend-mode',
-];
+]
 
 const b = [
   'outline',
@@ -43,6 +43,6 @@ const b = [
   'isolation',
   'backdrop-filter',
   'mix-blend-mode',
-];
+]
 
-module.exports = [].concat(a, borderProps, b);
+module.exports = [].concat(a, borderProps, b)

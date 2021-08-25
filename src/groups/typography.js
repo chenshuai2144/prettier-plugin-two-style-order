@@ -56,4 +56,4 @@ module.exports = [
   'page-break-before',
   'page-break-inside',
   'src',
-];
+]

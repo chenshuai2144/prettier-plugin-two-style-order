@@ -25,5 +25,5 @@ module.exports = () =>
       (acc, { properties }) => ({
         'properties-order': [...acc['properties-order'], ...properties],
       }),
-      { 'order': ['custom-properties'], 'properties-order': [], 'unspecified-properties-position': 'bottom' },
+      { order: ['custom-properties'], 'properties-order': [], 'unspecified-properties-position': 'bottom' },
     )

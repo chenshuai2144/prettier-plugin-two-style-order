@@ -32,4 +32,4 @@ module.exports = [
   'border-image-repeat',
   'border-collapse',
   'border-spacing',
-];
+]
