@@ -1,6 +1,6 @@
 {
-  "name": "prettier-plugin-style-order",
-  "version": "0.1.0",
+  "name": "prettier-plugin-two-style-order",
+  "version": "1.0.0",
   "description": "Prettier plugin which sorts related style property declarations",
   "keywords": [
     "prettier",
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/natemoo-re/prettier-plugin-style-order.git"
+    "url": "git+https://github.com/chenshuai2144/prettier-plugin-two-style-order.git"
   },
   "bugs": {
-    "url": "https://github.com/natemoo-re/prettier-plugin-style-order/issues"
+    "url": "https://github.com/chenshuai2144/prettier-plugin-two-style-order/issues"
   },
-  "homepage": "https://github.com/natemoo-re/prettier-plugin-style-order",
+  "homepage": "https://github.com/chenshuai2144/prettier-plugin-two-style-order",
   "files": [
     "src"
   ],
@@ -36,12 +36,14 @@
     "test": "node test"
   },
   "dependencies": {
-    "postcss-sorting": "5.0.1"
+    "postcss": "^8.3.6",
+    "postcss-less": "^5.0.0",
+    "postcss-sorting": "6.0.0"
   },
   "devDependencies": {
-    "prettier": "1.19.1"
+    "prettier": "2.x"
   },
   "peerDependencies": {
-    "prettier": ">= 1.13"
+    "prettier": ">= 2.0.0"
   }
 }

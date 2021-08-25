@@ -1,6 +1,5 @@
 const prettier = require('prettier/parser-postcss');
 const sorter = require('./config/sorter')
-
 const { parsers } = prettier;
 
 const languages  = Object.keys(parsers);

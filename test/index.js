@@ -72,6 +72,22 @@ const tests = {
 }
 `,
   },
+  less:{
+    input:`.bg {
+      overflow: hidden;
+      height: 100vh;
+      background: url("../assets/bg.jpg") no-repeat;
+      background-size: cover;
+    }
+`, expected: `
+.bg {
+  height: 100vh;
+  overflow: hidden;
+  background: url("../assets/bg.jpg") no-repeat;
+  background-size: cover;
+}
+`
+  }
 }
 
 const color = passed => passed ? green : red;
@@ -87,10 +103,10 @@ async function testGroup(ext) {
         filepath,
         plugins: ['.'],
       })
-      const passed = output === expected;
+      const passed = output.trim() === expected.trim();
       console.log(color(passed)(`${passed ? '✔' : '✖'} ${filepath}`));
       if (!passed) {
-        console.log(output, expected);
+        console.log(output,'\n', expected);
         process.exitCode = 1
       }
     })
