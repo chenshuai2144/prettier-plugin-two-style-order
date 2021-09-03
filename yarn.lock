@@ -17,10 +17,12 @@ nanoid@^3.1.23:
   resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.25.tgz?cache=0&sync_timestamp=1628771923493&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fnanoid%2Fdownload%2Fnanoid-3.1.25.tgz#09ca32747c0e543f0e1814b7d3793477f9c8e152"
   integrity sha1-CcoydHwOVD8OGBS303k0d/nI4VI=
 
-postcss-less@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.nlark.com/postcss-less/download/postcss-less-5.0.0.tgz#3fa361ed8e52a9c3e6e4fdb9bb95fd9032f3c62b"
-  integrity sha1-P6Nh7Y5SqcPm5P25u5X9kDLzxis=
+postcss-less@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.nlark.com/postcss-less/download/postcss-less-4.0.1.tgz#73caf5dac056d4b706f4cc136cefeaf4e79067a4"
+  integrity sha1-c8r12sBW1LcG9MwTbO/q9OeQZ6Q=
+  dependencies:
+    postcss "^8.1.2"
 
 postcss-sorting@6.0.0:
   version "6.0.0"
@@ -29,7 +31,7 @@ postcss-sorting@6.0.0:
   dependencies:
     lodash "^4.17.20"
 
-postcss@^8.3.6:
+postcss@^8.1.2, postcss@^8.3.6:
   version "8.3.6"
   resolved "https://registry.nlark.com/postcss/download/postcss-8.3.6.tgz#2730dd76a97969f37f53b9a6096197be311cc4ea"
   integrity sha1-JzDddql5afN/U7mmCWGXvjEcxOo=
