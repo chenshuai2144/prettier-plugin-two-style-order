@@ -5,7 +5,7 @@ __Style Order__ is a [Prettier](https://prettier.io/) plugin which sorts propert
 ## Installation
 
 ```bash
-npm i -D prettier-plugin-style-order
+npm i -D prettier-plugin-two-style-order
 ```
 
 That's it! Prettier should automatically find/use the plugin.
